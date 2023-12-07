@@ -1,0 +1,37 @@
+{
+    "lint": {
+        "include": [
+            "src/**/*"
+        ],
+        "rules": {
+            "tags": [
+                "recommended"
+            ]
+        }
+    },
+    "fmt": {
+        "useTabs": false,
+        "lineWidth": 80,
+        "indentWidth": 4,
+        "semiColons": true,
+        "singleQuote": true,
+        "proseWrap": "preserve",
+        "include": [
+            "src/**/*",
+            "test/**/*"
+        ],
+        "exclude": [
+            "test/data/**/*"
+        ]
+    },
+    "tasks": {
+        "start": "deno run --allow-env --allow-net src/main.ts",
+        "dev": "deno run --watch --allow-env --allow-net src/main.ts",
+        "test": "deno test --allow-read"
+    },
+    "imports": {
+        "deno-dom": "https://deno.land/x/deno_dom@v0.1.43/deno-dom-wasm.ts",
+        "another_cookiejar": "https://deno.land/x/another_cookiejar@v5.0.3/mod.ts",
+        "grammy": "https://deno.land/x/grammy@v1.19.2/mod.ts"
+    }
+}
